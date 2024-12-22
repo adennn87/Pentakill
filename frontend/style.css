@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa; /* Màu nền nhẹ nhàng */
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 70%; /* Giảm kích thước để gọn hơn */
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Tăng độ rõ của bóng */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.chat-box {
+    width: 100%;
+    height: 55rem;
+    overflow-y: auto;
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fdfdfd; /* Màu nền sáng cho hộp chat */
+}
+
+.chat-message {
+    margin-bottom: 15px;
+    padding: 12px;
+    word-wrap: break-word;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.chat-message.user {
+    background-color: #e8f5e9; /* Màu xanh nhẹ cho người dùng */
+    text-align: right;
+    margin-left: auto;
+    color: #2e7d32; /* Màu chữ xanh đậm */
+}
+
+.chat-message.bot {
+    background-color: #e3f2fd; /* Màu xanh nhẹ cho bot */
+    text-align: left;
+    margin-right: auto;
+    color: #1565c0; /* Màu chữ xanh đậm */
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f8f9fa; /* Nền sáng cho input */
+}
+
+.chat-input input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.chat-input input[type="text"]:focus {
+    outline: none;
+    border-color: #80bdff; /* Hiệu ứng focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.chat-input button {
+    padding: 10px 16px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    filter: brightness(90%);
+}
+
+#send-btn {
+    background-color: #007bff; /* Nút gửi màu xanh dương */
+}
+
+#send-image-btn {
+    background-color: #28a745; /* Nút gửi ảnh màu xanh lá */
+    margin-left: 10px;
+}
+
+#toggle-voice-btn {
+    background-color: #ffc107; /* Nút ghi âm màu vàng */
+    margin-left: 10px;
+}
+
+.chat-input button#send-image-btn:hover {
+    background-color: #218838; /* Hover xanh lá đậm */
+}
+
+.chat-input button#toggle-voice-btn:hover {
+    background-color: #e0a800; /* Hover vàng đậm */
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.menu > li {
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.menu > li:hover {
+    background-color: #e9ecef; /* Màu xám nhẹ khi hover menu */
+    cursor: pointer;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: #495057; /* Màu chữ menu */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu > li > a:hover {
+    color: #007bff; /* Hover chữ màu xanh */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
